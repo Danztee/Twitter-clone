@@ -35,9 +35,9 @@ const Details = (props) => {
                   width="60"
                   style={{ borderRadius: "50%" }}
                 />
-                <h3 style={{ margin: "0", marginTop: "5px" }}>
+                <h5 style={{ margin: "0", marginTop: "5px" }}>
                   {props.profile.name}
-                </h3>
+                </h5>
                 <span>@{props.profile.username}</span>
               </div>
               <div className={classes.partTwo}>
