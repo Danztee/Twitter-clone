@@ -1,0 +1,21 @@
+.button {
+  border: none;
+  outline: none;
+  color: #fff;
+  font-weight: bold;
+  font-size: 14px;
+  border-radius: 30px;
+  cursor: pointer;
+}
+
+.following {
+  border: solid 1px rgb(83, 100, 113);
+  background: transparent;
+  color: #fff !important;
+}
+
+.following:hover {
+  border: solid 1px rgb(103, 7, 15);
+  color: rgb(244, 33, 46) !important;
+  background-color: rgba(244, 33, 46, 0.1);
+}

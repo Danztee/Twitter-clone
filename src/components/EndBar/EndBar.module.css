@@ -1,0 +1,114 @@
+.EndBar {
+  padding: 0.5rem 0.8rem 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.hover {
+  padding: 0 1rem;
+  transition-duration: 0.2s;
+  cursor: pointer;
+}
+
+.hover:hover {
+  background-color: rgba(255, 255, 255, 0.03);
+}
+
+.Trends h5 {
+  font-weight: bold;
+}
+
+.TrendsList p {
+  margin: 0;
+  font-size: 12px;
+}
+.TrendsList p:nth-child(odd) {
+  color: grey;
+}
+.TrendsList span {
+  font-size: 14px;
+}
+
+.footer {
+  /* line-height: 20px; */
+  display: flex;
+  padding: 0;
+  margin: 0;
+}
+
+.footer li {
+  list-style: none;
+}
+
+.footer a {
+  margin-right: 1rem;
+  font-size: 12px;
+  color: grey;
+  text-decoration: none;
+}
+
+.copy {
+  font-size: 12px;
+  color: grey;
+  margin-top: 0.2rem;
+}
+
+.footer a:hover {
+  text-decoration: underline;
+}
+
+.messages {
+  position: fixed;
+  bottom: 0;
+
+  width: 370px;
+  margin-left: -3px;
+
+  box-shadow: rgb(255 255 255 / 20%) 0px 0px 15px,
+    rgb(255 255 255 / 15%) 0px 0px 3px 1px;
+  border-top-right-radius: 16px;
+  border-top-left-radius: 16px;
+  background-color: rgb(0, 0, 0);
+
+  transition: all 0.3s ease 0s;
+}
+
+.show {
+  height: 72%;
+}
+
+.hide {
+  height: auto;
+}
+
+/* backdrop-filter: blur(12px); */
+
+.real {
+  display: flex;
+  gap: 11rem;
+  align-items: center;
+  padding: 0.8rem 1rem;
+}
+
+.icon {
+  display: flex;
+  gap: 1rem;
+  cursor: pointer;
+}
+
+/* unfollow btn */
+.btn {
+  width: 100%;
+  border: solid 1px grey;
+  color: #fff;
+  background: transparent;
+  padding: 0.8rem;
+  font-weight: bold;
+  border-radius: 30px;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: rgba(239, 243, 244, 0.1);
+}

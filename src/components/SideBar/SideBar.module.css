@@ -1,0 +1,65 @@
+.header {
+  padding: 1rem 1.7rem;
+}
+
+.fixed {
+  position: fixed;
+}
+
+.links {
+  color: rgb(214, 217, 219);
+  display: flex;
+  font-size: 20px;
+  /* font-weight: bold; */
+  align-items: center;
+  /* font-weight: bold; */
+  gap: 1rem;
+  padding: 0.8rem 0.5rem;
+  transition-duration: 0.2s;
+  text-transform: capitalize;
+}
+
+#logo {
+  margin-left: 0.5rem;
+}
+
+.links:hover {
+  background-color: rgba(231, 233, 234, 0.1);
+  border-radius: 2rem;
+}
+
+.links a {
+  text-decoration: none;
+  color: rgb(214, 217, 219);
+}
+
+#container {
+  text-decoration: none;
+}
+
+.profile {
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  padding: 0.8rem 0;
+  align-items: center;
+  transition-duration: 0.2s;
+  margin-top: 4rem;
+  margin-left: 2rem;
+}
+
+.profile:hover {
+  background-color: rgba(231, 233, 234, 0.1);
+  border-radius: 2rem;
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+
+#container {
+  text-decoration: none;
+}
+
+.nameBox {
+  display: flex;
+}

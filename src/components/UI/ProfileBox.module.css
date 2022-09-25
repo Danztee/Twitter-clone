@@ -1,0 +1,25 @@
+.profile {
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  padding: 0.8rem 0;
+  align-items: center;
+  transition-duration: 0.2s;
+  margin-top: 4rem;
+}
+
+.profile:hover {
+  background-color: rgba(231, 233, 234, 0.1);
+  /* border-radius: 2rem;
+  margin-left: 1rem;
+  margin-right: 1rem; */
+}
+
+#container {
+  text-decoration: none;
+}
+
+.nameBox {
+  display: flex;
+}
