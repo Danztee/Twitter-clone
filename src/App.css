@@ -30,6 +30,7 @@
     z-index: 999;
     width: 80vw;
     height: 100%;
+    position: fixed;
 
     display: none;
 
