@@ -1,14 +1,11 @@
 import React, { Fragment } from "react";
 import ReactDOM from "react-dom";
-
-import Button from "../../store/Button";
+import Button from "./Button";
 import classes from "./Modal.module.css";
 
 const Details = (props) => {
   const hide = () => {
-    setTimeout(() => {
-      props.onHideProfile();
-    }, 500);
+    props.onHideProfile();
   };
 
   return (

@@ -6,6 +6,8 @@ import Modal from "../UI/Modal";
 function UnFollow(props) {
   const handler = (e) => {
     props.unfollow(e);
+    localStorage.setItem("ready", "unfollowNow");
+    props.unFollow();
   };
 
   // console.log(props);

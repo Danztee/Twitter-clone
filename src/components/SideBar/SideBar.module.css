@@ -2,17 +2,11 @@
   padding: 1rem 1.7rem;
 }
 
-.fixed {
-  position: fixed;
-}
-
 .links {
   color: rgb(214, 217, 219);
   display: flex;
   font-size: 20px;
-  /* font-weight: bold; */
   align-items: center;
-  /* font-weight: bold; */
   gap: 1rem;
   padding: 0.8rem 0.5rem;
   transition-duration: 0.2s;
@@ -60,4 +54,19 @@
 
 .nameBox {
   display: flex;
+}
+
+#button {
+  padding: 0.8em 5.5rem;
+  font-size: 17px;
+  background-color: rgb(29, 155, 240);
+  border: none;
+  outline: none;
+  color: #fff;
+  font-weight: bold;
+  border-radius: 30px;
+}
+
+#button:hover {
+  background-color: rgb(26, 140, 216);
 }

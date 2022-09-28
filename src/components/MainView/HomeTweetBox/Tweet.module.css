@@ -1,0 +1,79 @@
+.iconBox {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  color: rgb(113, 118, 123);
+  cursor: pointer;
+  transition-duration: 0.2s;
+}
+
+.iconBox span {
+  font-size: 15px;
+  font-weight: lighter;
+}
+
+#reply:hover {
+  color: rgba(29, 155, 240);
+}
+
+#retweet:hover {
+  color: rgba(0, 186, 124);
+}
+
+#like:hover {
+  color: rgba(249, 24, 128);
+}
+
+#share:hover {
+  color: rgba(29, 155, 240);
+}
+
+.namesBox {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.2rem;
+}
+
+.namesBox p:last-child {
+  margin-left: auto;
+}
+
+/* @media screen and (max-width: 500px) {
+  .namesBox p:last-child {
+    margin-left: auto;
+    position: relative;
+    left: 20px;
+  }
+} */
+
+.namesBox p.paragraph {
+  font-size: 15px;
+  color: rgb(113, 118, 123);
+}
+
+@media screen and (max-width: 500px) {
+  .namesBox p.paragraph {
+    font-size: 13px;
+  }
+}
+
+.list {
+  padding: 5px 1rem;
+}
+
+@media screen and (max-width: 500px) {
+  .list {
+    padding: 5px 0.5rem;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  #icon {
+    transform: rotate(90deg);
+    position: absolute;
+    right: 0;
+    z-index: -999;
+  }
+}

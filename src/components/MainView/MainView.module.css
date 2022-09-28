@@ -1,0 +1,112 @@
+.nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 1rem;
+  padding-top: 1rem;
+  width: 100%;
+  max-width: 1000px;
+  height: 53px;
+  background-color: rgba(0, 0, 0, 0.65);
+  backdrop-filter: blur(12px);
+  position: sticky;
+  top: 0;
+}
+
+.form input {
+  width: 100%;
+  padding: 1.1rem 0;
+  padding-left: 10px;
+  background-color: transparent;
+  color: #fff;
+  outline: none;
+  border: none;
+  font-size: 19px;
+}
+
+.form p {
+  color: rgb(29, 155, 240);
+  font-weight: bold;
+  font-size: 14px;
+  display: flex;
+  gap: 0.2rem;
+  padding-bottom: 1rem;
+  margin: 0;
+}
+
+.form button {
+  background-color: rgb(29, 155, 240);
+  border: none;
+  outline: none;
+  border-radius: 30px;
+  padding: 7px 20px;
+  font-weight: bold;
+  color: #fff;
+  font-size: 15px;
+}
+
+.dropdown select {
+  color: rgb(29, 155, 240);
+  background-color: transparent;
+  border-radius: 20px;
+  padding: 2px 8px;
+  outline: none;
+  cursor: pointer;
+
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.formicon {
+  color: rgb(29, 155, 240);
+  cursor: pointer;
+  display: flex;
+  gap: 1rem;
+}
+
+@media screen and (max-width: 500px) {
+  .formicon {
+    display: none;
+  }
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 5px;
+}
+.container div:last-child {
+  margin-left: auto;
+}
+
+.container div:nth-child(2) {
+  margin-left: auto;
+}
+@media screen and (max-width: 500px) {
+  .container div:nth-child(2) {
+    margin-left: 0;
+  }
+}
+
+/* second icon styles */
+.secondIcon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  color: rgb(29, 155, 240);
+}
+.add {
+  border: solid 1px rgb(83, 100, 113);
+  padding: 2px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.border {
+  background-color: rgb(62, 65, 68);
+  height: 31px;
+  width: 1px;
+}

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import Input from "../UI/Input";
 import Follow from "./Follow";
 import Trends from "./Trends";
@@ -15,25 +15,49 @@ function EndBar(props) {
     props.onSendFile(data);
   };
 
+  const [scrollPosition, setScrollPosition] = useState(0);
+  const [scroll, setScroll] = useState(false);
+
+  const handleScroll = () => {
+    const position = window.pageYOffset;
+    setScrollPosition(position);
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll, { passive: true });
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
+  useEffect(() => {
+    if (scrollPosition > 750) {
+      setScroll(true);
+    }
+  }, [scrollPosition]);
+
   return (
-    <section className={classes.EndBar}>
+    <div className={`${classes.EndBar} ${scroll && classes.sticky}`}>
       <Input />
-      <Trends />
-      <Follow
-        onOpenUnFollowBox={props.onOpenUnFollowBox}
-        onUnFollow={props.onUnFollow}
-        item={props.item}
-        username={props.username}
-        onTransfer={onTransfer}
-        onSendFile={onSendFile}
-        permanent={props.permanent}
-        newData={props.newData}
-        onShowProfile={props.onShowProfile}
-        onHideProfile={props.onHideProfile}
-      />
-      <Footer />
+      <div>
+        <Trends />
+        <Follow
+          onOpenUnFollowBox={props.onOpenUnFollowBox}
+          onUnFollow={props.onUnFollow}
+          item={props.item}
+          username={props.username}
+          onTransfer={onTransfer}
+          onSendFile={onSendFile}
+          permanent={props.permanent}
+          newData={props.newData}
+          onShowProfile={props.onShowProfile}
+          onHideProfile={props.onHideProfile}
+        />
+        <Footer />
+      </div>
       <Messages />
-    </section>
+    </div>
   );
 }
 

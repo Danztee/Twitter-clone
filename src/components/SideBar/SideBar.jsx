@@ -1,8 +1,6 @@
 import React from "react";
 import SideLink from "./SideLink";
 import classes from "./SideBar.module.css";
-import Button from "../../store/Button";
-
 import img from "../assets/daniel.jpeg";
 
 function SideBar() {
@@ -128,15 +126,7 @@ function SideBar() {
           />
         </div>
 
-        <Button
-          style={{
-            padding: "0.8em 5.5rem",
-            fontSize: "17px",
-            backgroundColor: "rgb(29, 155, 240)",
-            cursor: "pointer",
-          }}
-          tweet="Tweet"
-        />
+        <button id={classes.button}>Tweet</button>
       </header>
 
       {/* profile-box */}

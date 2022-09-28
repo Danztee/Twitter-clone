@@ -1,18 +1,19 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import classes from "./Button.module.css";
 
 function Button(props) {
   const [following, setFollowing] = useState(false);
   const [follow, setFollow] = useState(props.tweet);
+  const identify = useRef("");
 
-  const addFollow = () => {
+  const addFollow = (e) => {
     setFollow("Following");
   };
 
-  const removeFollow = () => {
-    setFollow("Follow");
-    setFollowing(false);
-  };
+  // const removeFollow = (e) => {
+  //   setFollow("Follow");
+  //   setFollowing(false);
+  // };
 
   const toggleUnFollow = (e) => {
     if (e.target.textContent === "Following") {
@@ -36,8 +37,6 @@ function Button(props) {
     }
     if (e.target.textContent === "Unfollow") {
       props.onOpenUnFollowBox();
-      console.log(props);
-      // removeFollow();
     }
   }
 
@@ -49,6 +48,7 @@ function Button(props) {
       onMouseLeave={toggleUnFollow}
       onMouseEnter={addUnFollow}
       username={props.username}
+      ref={identify}
     >
       {follow}
     </button>

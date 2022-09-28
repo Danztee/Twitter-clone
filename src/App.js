@@ -3,7 +3,7 @@ import "./App.css";
 import SideBar from "./components/SideBar/SideBar";
 import EndBar from "./components/EndBar/EndBar";
 import UnFollow from "./components/EndBar/UnFollow";
-
+import MainView from "./components/MainView/MainView";
 import Popup from "./components/UI/Popup";
 
 function App(props) {
@@ -12,15 +12,13 @@ function App(props) {
   const [permanent, setPermanent] = useState();
   const [popup, setPopup] = useState(false);
   const [profile, setProfile] = useState([]);
-
+  const [openSideBar, setOpenSideBar] = useState(false);
   // popup functionality
   const showPopup = () => {
     setPopup(true);
   };
   const hidePopup = () => {
-    setTimeout(() => {
-      setPopup(false);
-    }, 500);
+    setPopup(false);
   };
   const onSendFile = (data) => {
     setProfile(data);
@@ -44,9 +42,23 @@ function App(props) {
     setPermanent(data);
   };
 
+  const clicked = (data, event) => {
+    setOpenSideBar(data);
+  };
+
+  if (openSideBar === true) {
+    document.body.style.overflow = "hidden";
+  }
+
+  document.body.addEventListener("click", () => {
+    if (openSideBar === false) {
+      setOpenSideBar(false);
+      document.body.style.overflow = "";
+    }
+  });
+
   return (
-    <div>
-      {/* <Popup /> */}
+    <section>
       {popup && (
         <Popup
           profile={profile}
@@ -58,10 +70,18 @@ function App(props) {
         <UnFollow unFollow={hideUnFollow} unfollow={newData} name={name} />
       )}
       <div className="grid">
-        <div id="sideBar" className="">
+        <div
+          id="sideBar"
+          className=""
+          style={{
+            display: openSideBar ? "block" : "",
+          }}
+        >
           <SideBar />
         </div>
-        <div id="mainView" className="" onMouseOver={hidePopup}></div>
+        <div id="mainView" className="" onMouseOver={hidePopup}>
+          <MainView open={clicked} />
+        </div>
         <div id="endBar" className="">
           <EndBar
             onMouseEnter={hidePopup}
@@ -77,7 +97,7 @@ function App(props) {
           />
         </div>
       </div>
-    </div>
+    </section>
   );
 }
 

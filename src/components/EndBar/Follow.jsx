@@ -37,7 +37,7 @@ function Follow(props) {
 
   return (
     <Cover>
-      <div className={classes.box}>
+      <div className={classes.box} style={{ margin: "1rem 0" }}>
         <h5 style={{ padding: "1rem 1rem 0 1rem", fontWeight: "bold" }}>
           Who to follow
         </h5>

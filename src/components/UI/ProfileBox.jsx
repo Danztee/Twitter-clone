@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import classes from "./ProfileBox.module.css";
-
-import Button from "../../store/Button";
+import Button from "./Button";
 
 function ProfileBox(props) {
   const [hoverName, setHoverName] = useState(false);
