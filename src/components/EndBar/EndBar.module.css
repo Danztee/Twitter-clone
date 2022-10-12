@@ -74,17 +74,15 @@
   border-top-right-radius: 16px;
   border-top-left-radius: 16px;
   background-color: rgb(0, 0, 0);
-
-  transition-duration: 0.2s;
+  transition: all 0.3s linear;
 }
 
 .show {
   height: 72%;
-  transition-duration: 0.2s;
 }
 
 .hide {
-  height: auto;
+  height: 4rem;
 }
 
 .real {

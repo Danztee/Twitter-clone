@@ -1,27 +1,13 @@
-import React, { useState, useRef } from "react";
+import React, { useState } from "react";
 import classes from "./EndBar.module.css";
 
 function Messages() {
   const [open, setOpen] = useState(false);
-  const check = useRef(false);
-
-  // let show = false;
-
-  function toggle() {
-    if (open === false) {
-      setOpen(true);
-      check.current = true;
-    }
-    if (open === true) {
-      setOpen(false);
-      check.current = false;
-    }
-  }
 
   return (
     <div
-      className={`${classes.messages} ${
-        check.current ? classes["show"] : classes[".hide"]
+      className={`${classes["messages"]} ${
+        open ? classes["show"] : classes["hide"]
       }`}
     >
       <div className={classes.real}>
@@ -58,7 +44,9 @@ function Messages() {
             height="22"
             fill="currentColor"
             style={{ color: "rgb(239, 243, 244)" }}
-            onClick={toggle}
+            onClick={() => {
+              setOpen(!open);
+            }}
           >
             <g>
               <path
